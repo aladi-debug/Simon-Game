@@ -91,7 +91,7 @@ function checkAnswer(currentLevel) {
       if (
         gamePattern[i] !== userClickedPattern[i] &&
         userClickedPattern.length - 1 === i
-      ) {gameOver(Output[Math.round(Math.random() * (Output.length - 1))] +"press enter to restart")
+      ) {gameOver(Output[Math.round(Math.random() * (Output.length - 1))])
       }
     }
   }
