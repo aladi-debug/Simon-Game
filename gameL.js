@@ -104,12 +104,13 @@ function startOver() {
 }
 
 function gameOver(deathScreen) {
+  
   playSound("wrong");
   $("body").addClass("game-over");
   setTimeout(function () {
     ($("body").removeClass("game-over"), 300);
   });
 
-  $("h1").text(" "deathScreen);
+  $("h1").text(deathScreen);
   startOver();
 }
