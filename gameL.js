@@ -110,6 +110,6 @@ function gameOver(deathScreen) {
     ($("body").removeClass("game-over"), 300);
   });
 
-  $("h1").text(deathScreen);
+  $("h1").text(" "deathScreen);
   startOver();
 }
