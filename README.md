@@ -7,4 +7,4 @@ vist [this page](https://aladi-debug.github.io/Simon-Game) to play.
 * Memorize and repeat the longest random sequence of colors and sounds as possible without making a mistake
 
 > [!TIP]
-> Try to beat My record of 28
+> Try to beat My record of 18
