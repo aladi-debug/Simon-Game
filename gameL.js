@@ -1,3 +1,4 @@
+
 /* eslint-disable no-unused-vars */
 
 let gamePattern = [];
@@ -113,3 +114,4 @@ function gameOver(deathScreen) {
   $("h1").text(deathScreen);
   startOver();
 }
+
