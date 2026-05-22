@@ -1,3 +1,4 @@
+@@ -1,115 +1,115 @@
 /* eslint-disable no-unused-vars */
 
 let gamePattern = [];
@@ -91,6 +92,7 @@ function checkAnswer(currentLevel) {
       if (
         gamePattern[i] !== userClickedPattern[i] &&
         userClickedPattern.length - 1 === i
+      ) {gameOver(Output[Math.round(Math.random() * (Output.length - 1))] +"press enter to restart")
       ) {gameOver(Output[Math.round(Math.random() * (Output.length - 1))])
       }
     }
@@ -104,13 +106,12 @@ function startOver() {
 }
 
 function gameOver(deathScreen) {
-  
   playSound("wrong");
   $("body").addClass("game-over");
   setTimeout(function () {
     ($("body").removeClass("game-over"), 300);
   });
 
-  $("h1").text(deathScreen);
+  $("h1").text(" "deathScreen);
   startOver();
 }
