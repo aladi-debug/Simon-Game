@@ -25,14 +25,17 @@ function nextSequence() {
 $(".btn").click(userClicked);
 
 function userClicked(event) {
-  if (gamePattern.length !== 0){
+  if (event.target.id ==="level-title"){
+    nextSequence()
+  }
+  else if (gamePattern.length !== 0){
   let userChosenColour = event.target.id;
   userClickedPattern.push(userChosenColour);
   playSound(userChosenColour);
   animatePress(userChosenColour);
   checkAnswer(userClickedPattern.at(-1));
 }
-else{gameOver("firstly, press Enter to start")}
+else{gameOver("Click ME")}
 
 
 
@@ -73,6 +76,10 @@ function animatePress(currentColor) {
   }, 100);
 }
 
+$("h1").click(function(ev) {
+  nextSequence()
+})
+
 $(document).keypress(function (event) {
   if(event.key === "Enter"){
         nextSequence();
@@ -91,7 +98,7 @@ function checkAnswer(currentLevel) {
       if (
         gamePattern[i] !== userClickedPattern[i] &&
         userClickedPattern.length - 1 === i
-      ) {gameOver(Output[Math.round(Math.random() * (Output.length - 1))] +"press enter to restart")
+      ) {gameOver(Output[Math.round(Math.random() * (Output.length - 1))])
       }
     }
   }
@@ -113,3 +120,10 @@ function gameOver(deathScreen) {
   $("h1").text(deathScreen);
   startOver();
 }
+
+// const screenWidth = screen.width;
+// const screenHeight = screen.height;
+
+// if (screenWidth < 800){
+
+// }
