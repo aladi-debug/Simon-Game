@@ -26,14 +26,17 @@ function nextSequence() {
 $(".btn").click(userClicked);
 
 function userClicked(event) {
-  if (gamePattern.length !== 0){
+  if (event.target.id ==="level-title"){
+    nextSequence()
+  }
+  else if (gamePattern.length !== 0){
   let userChosenColour = event.target.id;
   userClickedPattern.push(userChosenColour);
   playSound(userChosenColour);
   animatePress(userChosenColour);
   checkAnswer(userClickedPattern.at(-1));
 }
-else{gameOver("firstly, press Enter to start")}
+else{gameOver("Click ME")}
 
 
 
@@ -73,6 +76,10 @@ function animatePress(currentColor) {
     $(".btn").removeClass("pressed");
   }, 100);
 }
+
+$("h1").click(function(ev) {
+  nextSequence()
+})
 
 $(document).keypress(function (event) {
   if(event.key === "Enter"){
