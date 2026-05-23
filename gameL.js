@@ -1,3 +1,4 @@
+
 /* eslint-disable no-unused-vars */
 
 let gamePattern = [];
@@ -121,9 +122,3 @@ function gameOver(deathScreen) {
   startOver();
 }
 
-// const screenWidth = screen.width;
-// const screenHeight = screen.height;
-
-// if (screenWidth < 800){
-
-// }
